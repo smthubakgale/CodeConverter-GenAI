@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 });
 
 // Compiling Endpoint
-app.get("/convert", async (req, res) => {
+app.post("/convert", async (req, res) => {
 	try {
 		const { code, language } = req.body;
 
@@ -45,7 +45,7 @@ app.get("/convert", async (req, res) => {
 		res.status(200).send(chatCompletion.data.choices[0].message);
 	} catch (error) {
 		console.log(error);
-		res.status(400).json({ msg: error.message });
+		res.status(400).json({ msg: error.message , code:code , language:language });
 	}
 });
 
