@@ -56,7 +56,7 @@ require(["vs/editor/editor.main"], function () {
 			language: outputLanguage.value,
 		};
 		fetch(`${baseURL}/convert`, {
-			method: "POST",
+			method: "GET",
 			headers: {
 				"content-type": "Application/JSON",
 			},
@@ -94,7 +94,7 @@ require(["vs/editor/editor.main"], function () {
 			language: languageSelect.value || "javascript",
 		};
 		fetch(`${baseURL}/debug`, {
-			method: "POST",
+			method: "GET",
 			headers: {
 				"content-type": "Application/JSON",
 			},
@@ -137,7 +137,7 @@ require(["vs/editor/editor.main"], function () {
 			language: languageSelect.value || "javascript",
 		};
 		fetch(`${baseURL}/qc`, {
-			method: "POST",
+			method: "GET",
 			headers: {
 				"content-type": "Application/JSON",
 			},
