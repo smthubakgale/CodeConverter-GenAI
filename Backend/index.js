@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 });
 
 // Compiling Endpoint
-app.post("/convert", async (req, res) => {
+app.get("/convert", async (req, res) => {
 	try {
 		const { code, language } = req.body;
 
@@ -50,7 +50,7 @@ app.post("/convert", async (req, res) => {
 });
 
 // Debugging Endpoint
-app.post("/debug", async (req, res) => {
+app.get("/debug", async (req, res) => {
 	try {
 		const { code, language } = req.body;
 
