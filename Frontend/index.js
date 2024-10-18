@@ -56,7 +56,7 @@ require(["vs/editor/editor.main"], function () {
 			language: outputLanguage.value,
 		};
 		fetch(`${baseURL}/convert`, {
-			method: "GET",
+			method: "POST",
 			headers: {
 				"content-type": "Application/JSON",
 			},
